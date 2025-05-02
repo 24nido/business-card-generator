@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Business Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Digital Business Card Generator</h1>
+
+    <!-- Form to input data -->
+    <div class="form-container">
+        <input type="text" id="name" placeholder="Your Name" />
+        <input type="text" id="job" placeholder="Your Job Title" />
+        <input type="text" id="email" placeholder="Email Address" />
+        <input type="text" id="phone" placeholder="Phone Number" />
+        <input type="text" id="linkedin" placeholder="LinkedIn Profile" />
+        <input type="file" id="image" accept="image/*" />
+        <button onclick="generateCard()">Generate Card</button>
+    </div>
+
+    <!-- Business Card Preview -->
+    <div id="card" class="card">
+        <img id="card-image" src="" alt="Your Image" />
+        <h2 id="card-name">Name</h2>
+        <p id="card-job">Job Title</p>
+        <p id="card-email">Email</p>
+        <p id="card-phone">Phone</p>
+        <p id="card-linkedin">LinkedIn</p>
+    </div>
+
+    <!-- Download Button -->
+    <button onclick="downloadCard()">Download Card</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
